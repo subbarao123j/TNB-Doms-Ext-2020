@@ -79,6 +79,86 @@ public class AddUser {
         driver.findElementByXPath("//div[@class='row form-group']//following::input[9]").sendKeys("SCADA");
 
 
+        //state
+        driver.findElement(
+                By.xpath("//*[@id=\"root\"]/div[1]/div/div/main/div/div/div/div/div[2]/form/div/div[11]/select"))
+                .click();
+
+
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+
+        Select state = new Select(driver.findElementByXPath("//*[@id=\"root\"]/div[1]/div/div/main/div/div/div/div/div[2]/form/div/div[11]/select"));
+
+        System.out.println(state);
+
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+
+        state.selectByIndex(1);
+
+        //station
+        driver.findElement(
+                By.xpath("//*[@id=\"root\"]/div[1]/div/div/main/div/div/div/div/div[2]/form/div/div[12]/select"))
+                .click();
+
+
+
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+
+        Select station = new Select(driver.findElementByXPath("//*[@id=\"root\"]/div[1]/div/div/main/div/div/div/div/div[2]/form/div/div[12]/select"));
+
+        System.out.println(station);
+
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+
+        station.selectByIndex(1);
+
+        //unit
+        driver.findElement(
+                By.xpath("//*[@id=\"root\"]/div[1]/div/div/main/div/div/div/div/div[2]/form/div/div[13]/select"))
+                .click();
+
+
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+
+        Select unit = new Select(driver.findElementByXPath("//*[@id=\"root\"]/div[1]/div/div/main/div/div/div/div/div[2]/form/div/div[13]/select"));
+
+        System.out.println(unit);
+
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+
+        unit.selectByIndex(1);
+
+
         //status
         driver.findElement(
                 By.xpath("/html/body/div/div[1]/div/div/main/div/div/div/div/div[2]/form/div/div[14]/select"))
@@ -97,7 +177,7 @@ public class AddUser {
         System.out.println(status);
 
         try {
-            Thread.sleep(3000);
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
